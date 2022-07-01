@@ -1,12 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+    --background-sedan: #E28625;
+    --background-suv: #006971;
+    --background-luxury: #004140;
+}
+
 body, html {
-    height: auto;
+    height: 100%;
     width: 100%;
-    padding: 0 !important;
-    background-color: var(--background);
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 button {
     cursor: pointer;
+}
+
+.content {
+    height: 500px;
+    width: 920px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+    background: var(--background-sedan);
+}
+
+.content-car {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-car-container {
+    height: 404px;
+    width: 212px;
+}
+
+.title {
+    font-family: 'Big Shoulders Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #F2F2F2;
+    margin-top: 35px;
+}
+
+.description {
+    width: 212px;
+    height: 125px;
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    margin-top: 25px;
+}
+
+.btn-learn-more {
+    width: 146px;
+    height: 48px;
+    margin-top: 80px;
+    background: #F2F2F2;
+    border-radius: 25px;
+    border: none;
+}
+
+.btn-learn-more:hover {
+    color: #FFFFFF !important;
+    background: none;
+    border: solid 2px #FFFFFF;
+}
+
+.sedan {
+    background-color: var(--background-sedan);
+}
+
+.sedan .btn-learn-more {
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #E28625;
+}
+.suvs {
+    background-color: var(--background-suv);
+    border-radius: 8px;
+}
+
+.suvs .btn-learn-more {
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #006971;
+}
+
+.luxury {
+    background-color: var(--background-luxury);
+}
+
+.luxury .btn-learn-more {
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #004140;
+}
+
+.car {
+    width: 64px;
+    height: 40px;
+}
+
+@media only screen and (max-width: 375px) {
+    body, html {
+         height: 1350px;
+    }
+
+    .content { 
+        height: 1326px;
+        width: 327px;
+        border-radius: 8px;
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .content-car-container {
+        height: 334px;
+        width: 231px;
+        
+    }
+    
+    .title {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .description {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .btn-learn-more {
+        height: 48px;
+        width: 146px;
+        margin-top: 25px;
+    }
 }
