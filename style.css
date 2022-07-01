@@ -5,6 +5,8 @@
     --background-sedan: #E28625;
     --background-suv: #006971;
     --background-luxury: #004140;
+    --white: #FFF;
+    --title-color: #F2F2F2;
 }
 
 body, html {
@@ -54,7 +56,7 @@ button {
     font-size: 40px;
     line-height: 48px;
     text-transform: uppercase;
-    color: #F2F2F2;
+    color: var(--title-color);
     margin-top: 35px;
 }
 
@@ -66,7 +68,7 @@ button {
     font-weight: 400;
     font-size: 15px;
     line-height: 25px;
-    color: #FFFFFF;
+    color: var(--white);
     mix-blend-mode: normal;
     opacity: 0.75;
     margin-top: 25px;
@@ -76,15 +78,15 @@ button {
     width: 146px;
     height: 48px;
     margin-top: 80px;
-    background: #F2F2F2;
+    background: var(--title-color);
     border-radius: 25px;
     border: none;
 }
 
 .btn-learn-more:hover {
-    color: #FFFFFF !important;
+    color: var(--white) !important;
     background: none;
-    border: solid 2px #FFFFFF;
+    border: solid 2px var(--white);
 }
 
 .sedan {
@@ -97,7 +99,7 @@ button {
     font-weight: 400;
     font-size: 15px;
     line-height: 25px;
-    color: #E28625;
+    color: var(--background-sedan);
 }
 .suvs {
     background-color: var(--background-suv);
@@ -110,7 +112,7 @@ button {
     font-weight: 400;
     font-size: 15px;
     line-height: 25px;
-    color: #006971;
+    color: var(--background-suv);
 }
 
 .luxury {
@@ -123,7 +125,7 @@ button {
     font-weight: 400;
     font-size: 15px;
     line-height: 25px;
-    color: #004140;
+    color: var(--background-luxury);
 }
 
 .car {
